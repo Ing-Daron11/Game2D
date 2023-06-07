@@ -6,6 +6,8 @@ import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.EntityFactory;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.entity.Spawns;
+import com.almasb.fxgl.physics.BoundingShape;
+import com.almasb.fxgl.physics.HitBox;
 import javafx.geometry.Rectangle2D;
 
 import static com.almasb.fxgl.dsl.FXGLForKtKt.getAppHeight;
@@ -18,6 +20,7 @@ public class GameEntityFactory implements EntityFactory {
         return FXGL.entityBuilder()
                 .from(data)
                 .view("player1.png")
+                .bbox(new HitBox(BoundingShape.box(32, 32)))
                 .scale(0.2,0.2)
                 .build();
     }
@@ -27,6 +30,7 @@ public class GameEntityFactory implements EntityFactory {
         return FXGL.entityBuilder()
                 .from(data)
                 .view("arma1.png")
+                .bbox(new HitBox(BoundingShape.box(32, 32)))
                 .scale(0.1,0.1)
                 .build();
     }
