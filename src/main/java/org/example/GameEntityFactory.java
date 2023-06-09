@@ -43,12 +43,48 @@ public class GameEntityFactory implements EntityFactory {
                 .build();
     }
 
+    @Spawns("weapon2")
+    public Entity newWeapon2(SpawnData data) {
+        return FXGL.entityBuilder()
+                .from(data)
+                .type(EntityType.WEAPON)
+                .viewWithBBox("arma1.png")
+                .with(new CollidableComponent(true))
+                .with(new WeaponComponent(1, 15))
+                .scale(0.1, 0.1)
+                .build();
+    }
+
+    @Spawns("life")
+    public Entity newLife(SpawnData data) {
+        return FXGL.entityBuilder()
+                .from(data)
+                .type(EntityType.LIFE)
+                .viewWithBBox("vida.png")
+                .with(new CollidableComponent(true))
+                .with(new WeaponComponent(1, 15))
+                .scale(0.1, 0.1)
+                .build();
+    }
+
     @Spawns("enemy")
     public Entity newEnemy(SpawnData data) {
         return FXGL.entityBuilder()
                 .from(data)
                 .type(EntityType.ENEMY)
                 .viewWithBBox("enemy1.png")
+                .with(new RandomMoveComponent(new Rectangle2D(0,0, getAppWidth(), getAppHeight()),25 ))
+                .with(new CollidableComponent(true))
+                .scale(0.15,0.15)
+                .build();
+    }
+
+    @Spawns("enemy2")
+    public Entity newEnemy2(SpawnData data) {
+        return FXGL.entityBuilder()
+                .from(data)
+                .type(EntityType.ENEMY)
+                .viewWithBBox("enemy2.png")
                 .with(new RandomMoveComponent(new Rectangle2D(0,0, getAppWidth(), getAppHeight()),25 ))
                 .with(new CollidableComponent(true))
                 .scale(0.15,0.15)

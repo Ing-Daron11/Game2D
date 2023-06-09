@@ -7,23 +7,30 @@ import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.geometry.Point2D;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
-import javafx.scene.transform.Scale;
 import javafx.util.Duration;
 import javafx.scene.input.KeyCode;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 
+
+import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
+import static com.almasb.fxgl.dsl.FXGLForKtKt.getGameWorld;
+import static com.almasb.fxgl.dsl.FXGLForKtKt.getInput;
 
 public class MainApp extends GameApplication {
 
     private Entity player;
     private Entity weapon;
     public static boolean isRealoding;
+    private int currentLevel = 1;
+    private Text text;
+    public static boolean isDeployedLevel2;
+    public static boolean isDeployedLevel3;
+    private int score = 0;
 
     private PlayerComponent playerComponent;
     @Override
@@ -38,6 +45,7 @@ public class MainApp extends GameApplication {
 
     @Override
     protected void initGame() {
+        getGameScene().setBackgroundRepeat("fondoNivel1.jpeg");
         FXGL.getGameWorld().addEntityFactory(new GameEntityFactory());
         player = spawn("player", 150, 150);
         weapon = spawn("weapon", 250, 250);
@@ -45,6 +53,47 @@ public class MainApp extends GameApplication {
         run(() ->{
            spawn("enemy", new SpawnData(random(100,400),random(100,500)));
         }, Duration.seconds(2), 10);
+
+    }
+    @Override
+    public void onUpdate(double tpf){
+        Text text = new Text("Nivel: " + currentLevel);
+        text.setTranslateX(50);
+        text.setTranslateY(30);
+        text.setFont(Font.font("Bodoni", 30));
+        getGameScene().addUINode(text);
+        if(score >= 1000 && !isDeployedLevel2){
+            level2();
+        }
+        if(score >= 2500 && !isDeployedLevel3){
+            level3();
+        }
+    }
+
+    private void level2(){
+        weapon = spawn("weapon2", 250, 250);
+        run(() ->{
+            spawn("enemy2", new SpawnData(random(100,400),random(100,500)));
+        }, Duration.seconds(2), 10);
+
+        run(() ->{
+            spawn("enemy", new SpawnData(random(100,400),random(100,500)));
+        }, Duration.seconds(2), 5);
+        isDeployedLevel2 = true;
+        currentLevel++;
+    }
+
+    private void level3(){
+        spawn("life", random(20, getAppWidth()-20),random(20,getAppHeight()-20));
+        run(() ->{
+            spawn("enemy2", new SpawnData(random(100,400),random(100,500)));
+        }, Duration.seconds(2), 15);
+
+        run(() ->{
+            spawn("enemy", new SpawnData(random(100,400),random(100,500)));
+        }, Duration.seconds(2), 10);
+        isDeployedLevel3 = true;
+        currentLevel++;
     }
 
     @Override
@@ -103,6 +152,12 @@ public class MainApp extends GameApplication {
             protected void onCollisionBegin(Entity player, Entity weapon) {
                 WithWeapon weaponComponent = player.getComponent(WithWeapon.class);
                 weaponComponent.setWeapon(weapon);
+                int weaponName = weapon.getComponent(WeaponComponent.class).getType();
+                if (weaponName == 1) {
+                    weaponComponent.setAmmoCount(30);
+                } else if (weaponName == 2) {
+                    weaponComponent.setAmmoCount(10);
+                }
             }
         });
 
@@ -113,8 +168,20 @@ public class MainApp extends GameApplication {
                 spawn("explosion", center);
                 bullet.removeFromWorld();
                 enemy.removeFromWorld();
+                inc("score", +100);
+                score += 100;
             }
         });
+    }
+
+    @Override
+    protected void initGameVars(Map<String, Object> vars){
+        vars.put("score", 0);
+    }
+
+    @Override
+    protected void initUI(){
+        addVarText(50, 70, "score");
     }
 
     public static void main(String[] args) {

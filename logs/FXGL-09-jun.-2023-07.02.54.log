@@ -1,0 +1,642 @@
+07:02:25.004 [main                     ] DEBUG GameApplication      - Logger initialized
+07:02:25.007 [main                     ] DEBUG GameApplication      - Logging settings
+Title: Nuke Dungeons
+Version: 0.3
+Width: 750
+Height: 750
+Fullscreen: true
+Intro: false
+Menus: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.app.SceneFactory
+Dialog Factory: class com.almasb.fxgl.ui.FXGLDialogFactory
+UI Factory: class com.almasb.fxgl.ui.FXGLUIFactory
+
+07:02:25.655 [JavaFX Application Thread] DEBUG Engine               - Initializing FXGL
+07:02:25.655 [JavaFX Application Thread] INFO  Engine               - FXGL-11.4 (06.08.2019 18.29) on WINDOWS (J:18.0.2 FX:12.0.1)
+07:02:25.655 [JavaFX Application Thread] INFO  Engine               - Source code and latest versions at: https://github.com/AlmasB/FXGL
+07:02:25.655 [JavaFX Application Thread] INFO  Engine               -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+07:02:25.661 [JavaFX Application Thread] DEBUG Engine               - Adding new engine service: class com.almasb.fxgl.audio.AudioPlayer
+07:02:25.662 [JavaFX Application Thread] DEBUG Engine               - Adding new engine service: class com.almasb.fxgl.notification.impl.NotificationServiceProvider
+07:02:25.663 [JavaFX Application Thread] DEBUG Engine               - Adding new engine service: class com.almasb.fxgl.achievement.AchievementManager
+07:02:25.670 [JavaFX Application Thread] DEBUG FS                   - Loaded FSServiceImpl
+07:02:25.671 [JavaFX Application Thread] DEBUG SaveLoadManager      - Checking profiles dir: profiles/
+07:02:25.671 [JavaFX Application Thread] DEBUG Engine               - Loading localizations
+07:02:25.689 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/properties/languages/english.properties
+07:02:25.693 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/properties/languages/french.properties
+07:02:25.695 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/properties/languages/german.properties
+07:02:25.697 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/properties/languages/russian.properties
+07:02:25.698 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/properties/languages/hungarian.properties
+07:02:25.701 [JavaFX Application Thread] DEBUG Engine               - Registering font factories
+07:02:25.701 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/ui/fonts/VarelaRound-Regular.ttf
+07:02:25.826 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/ui/fonts/Abel-Regular.ttf
+07:02:25.831 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/ui/fonts/lucida_console.ttf
+07:02:25.840 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/ui/fonts/Courier-Prime.ttf
+07:02:25.848 [JavaFX Application Thread] DEBUG Engine               - Setting UI factory
+07:02:26.004 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/textures/fxgl_logo.png
+07:02:26.094 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+07:02:26.161 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 750.0 x 750.0
+07:02:26.161 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    750.0 x 750.0
+07:02:26.161 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+07:02:26.163 [JavaFX Application Thread] DEBUG MainWindow           - Applying CSS: fxgl_dark.css
+07:02:26.164 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/ui/css/fxgl_dark.css
+07:02:26.165 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/ui/cursors/fxgl_default.png
+07:02:26.173 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+07:02:26.174 [JavaFX Application Thread] DEBUG MainWindow           - StartupScene -> StartupScene
+07:02:26.179 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/textures/fxgl_icon.png
+07:02:26.209 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+07:02:26.448 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (14.79998779296875, 38.0)
+07:02:26.448 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 750.0 x 750.0
+07:02:26.448 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+07:02:26.448 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 750.0 x 750.0
+07:02:26.448 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 764.7999877929688 x 788.0
+07:02:26.463 [FXGL Background Thread 1 ] DEBUG FS                   - Loaded FSServiceImpl
+07:02:26.463 [FXGL Background Thread 1 ] DEBUG Engine               - Loading FXGL system data
+07:02:26.476 [FXGL Background Thread 1 ] DEBUG FSServiceImpl        - Reading from: C:\Users\daron\Downloads\workspace\Programas java\Avanzado\Game2D\system\fxgl.bundle
+07:02:26.502 [FXGL Background Thread 1 ] DEBUG Engine               - Bundle FXGL: {}
+07:02:26.503 [FXGL Background Thread 1 ] DEBUG Engine               - Initializing application scenes
+07:02:26.554 [FXGL Background Thread 1 ] DEBUG GameWorld            - Game world initialized
+07:02:26.631 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=750, physics.ppm=50,0
+07:02:26.634 [FXGL Background Thread 1 ] DEBUG GameScene            - Game scene initialized: 750x750
+07:02:26.687 [FXGL Background Thread 1 ] DEBUG Input                - Registered new binding: Resume - Esc
+07:02:26.687 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from file system: /assets/textures/pause_menu_bg.png
+07:02:26.730 [FXGL Background Thread 1 ] DEBUG Input                - Registered new binding: Pause - Esc
+07:02:26.730 [FXGL Background Thread 1 ] DEBUG Engine               - Application scenes initialized
+07:02:26.734 [JavaFX Application Thread] DEBUG Engine               - Running preInit()
+07:02:26.735 [JavaFX Application Thread] DEBUG Input                - Registered new binding: MoveUp - W
+07:02:26.735 [JavaFX Application Thread] DEBUG Input                - Registered new binding: MoveDown - S
+07:02:26.735 [JavaFX Application Thread] DEBUG Input                - Registered new binding: MoveRight - D
+07:02:26.736 [JavaFX Application Thread] DEBUG Input                - Registered new binding: MoveLeft - A
+07:02:26.738 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Shoot - LMB
+07:02:26.739 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+07:02:26.740 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+07:02:26.741 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+07:02:26.741 [JavaFX Application Thread] DEBUG Engine               - generateDefaultProfile()
+07:02:26.741 [JavaFX Application Thread] DEBUG Engine               - Creating default profile
+07:02:26.742 [JavaFX Application Thread] DEBUG EventBus             - Firing event: SaveEvent
+07:02:26.753 [JavaFX Application Thread] DEBUG Engine               - Logging environment variables
+07:02:26.754 [JavaFX Application Thread] DEBUG Engine               - achievements: []
+07:02:26.754 [JavaFX Application Thread] DEBUG Engine               - language: ObjectProperty [value: ENGLISH]
+07:02:26.754 [JavaFX Application Thread] DEBUG Engine               - isCloseConfirmation: false
+07:02:26.754 [JavaFX Application Thread] DEBUG Engine               - isProfilingEnabled: false
+07:02:26.754 [JavaFX Application Thread] DEBUG Engine               - soundNotification: core/notification.wav
+07:02:26.754 [JavaFX Application Thread] DEBUG Engine               - devShowBBoxProperty: BooleanProperty [value: false]
+07:02:26.755 [JavaFX Application Thread] DEBUG Engine               - pixelsPerMeter: 50.0
+07:02:26.755 [JavaFX Application Thread] DEBUG Engine               - overlayRoot: Group@12cbee4a
+07:02:26.755 [JavaFX Application Thread] DEBUG Engine               - soundMenuBack: menu/back.wav
+07:02:26.755 [JavaFX Application Thread] DEBUG Engine               - appIcon: fxgl_icon.png
+07:02:26.755 [JavaFX Application Thread] DEBUG Engine               - isFullScreenAllowed: true
+07:02:26.755 [JavaFX Application Thread] DEBUG Engine               - isIntroEnabled: false
+07:02:26.755 [JavaFX Application Thread] DEBUG Engine               - eventBus: com.almasb.fxgl.event.EventBus@6c652b4b
+07:02:26.755 [JavaFX Application Thread] DEBUG Engine               - fontMono: lucida_console.ttf
+07:02:26.755 [JavaFX Application Thread] DEBUG Engine               - soundMenuSelect: menu/select.wav
+07:02:26.755 [JavaFX Application Thread] DEBUG Engine               - isWindows: true
+07:02:26.756 [JavaFX Application Thread] DEBUG Engine               - isMobile: false
+07:02:26.756 [JavaFX Application Thread] DEBUG Engine               - height: 750
+07:02:26.756 [JavaFX Application Thread] DEBUG Engine               - isExperimentalNative: false
+07:02:26.756 [JavaFX Application Thread] DEBUG Engine               - isSingleStep: false
+07:02:26.756 [JavaFX Application Thread] DEBUG Engine               - cSSList: [fxgl_dark.css]
+07:02:26.756 [JavaFX Application Thread] DEBUG Engine               - fontGame: Abel-Regular.ttf
+07:02:26.756 [JavaFX Application Thread] DEBUG Engine               - menuKey: ESCAPE
+07:02:26.756 [JavaFX Application Thread] DEBUG Engine               - devShowPositionProperty: BooleanProperty [value: false]
+07:02:26.756 [JavaFX Application Thread] DEBUG Engine               - versionCheckDays: 7
+07:02:26.756 [JavaFX Application Thread] DEBUG Engine               - masterTimer: com.almasb.fxgl.time.Timer@6fd2345d
+07:02:26.757 [JavaFX Application Thread] DEBUG Engine               - configClass: Optional.empty
+07:02:26.757 [JavaFX Application Thread] DEBUG Engine               - version: 0.3
+07:02:26.757 [JavaFX Application Thread] DEBUG Engine               - fullScreen: BooleanProperty [value: false]
+07:02:26.757 [JavaFX Application Thread] DEBUG Engine               - dialogFactory: com.almasb.fxgl.ui.FXGLDialogFactory@6a003a9e
+07:02:26.757 [JavaFX Application Thread] DEBUG Engine               - applicationMode: DEVELOPER
+07:02:26.757 [JavaFX Application Thread] DEBUG Engine               - isMac: false
+07:02:26.757 [JavaFX Application Thread] DEBUG Engine               - urlGoogleForms: https://goo.gl/forms/6wrMnOBxTE1fEpOy2
+07:02:26.757 [JavaFX Application Thread] DEBUG Engine               - isMenuEnabled: false
+07:02:26.758 [JavaFX Application Thread] DEBUG Engine               - profileName: user.profile
+07:02:26.758 [JavaFX Application Thread] DEBUG Engine               - urlPOM: https://raw.githubusercontent.com/AlmasB/FXGL/master/pom.xml
+07:02:26.758 [JavaFX Application Thread] DEBUG Engine               - notificationViewClass: class com.almasb.fxgl.notification.view.XboxNotificationView
+07:02:26.758 [JavaFX Application Thread] DEBUG Engine               - devSensorColorProperty: ObjectProperty [value: 0xffff00ff]
+07:02:26.758 [JavaFX Application Thread] DEBUG Engine               - sceneFactory: com.almasb.fxgl.app.SceneFactory@7ad84c73
+07:02:26.758 [JavaFX Application Thread] DEBUG Engine               - dataFileExt: .dat
+07:02:26.758 [JavaFX Application Thread] DEBUG Engine               - stageStyle: DECORATED
+07:02:26.758 [JavaFX Application Thread] DEBUG Engine               - isManualResizeEnabled: false
+07:02:26.758 [JavaFX Application Thread] DEBUG Engine               - title: Nuke Dungeons
+07:02:26.758 [JavaFX Application Thread] DEBUG Engine               - platform: WINDOWS
+07:02:26.759 [JavaFX Application Thread] DEBUG Engine               - devBBoxColorProperty: ObjectProperty [value: 0xff0000ff]
+07:02:26.759 [JavaFX Application Thread] DEBUG Engine               - isDesktop: true
+07:02:26.759 [JavaFX Application Thread] DEBUG Engine               - globalMusicVolumeProperty: DoubleProperty [value: 0.5]
+07:02:26.759 [JavaFX Application Thread] DEBUG Engine               - credits: []
+07:02:26.759 [JavaFX Application Thread] DEBUG Engine               - isPreserveResizeRatio: false
+07:02:26.759 [JavaFX Application Thread] DEBUG Engine               - uIFactory: com.almasb.fxgl.ui.FXGLUIFactory@3f220f10
+07:02:26.759 [JavaFX Application Thread] DEBUG Engine               - fontText: Courier-Prime.ttf
+07:02:26.759 [JavaFX Application Thread] DEBUG Engine               - isExperimentalTiledLargeMap: false
+07:02:26.759 [JavaFX Application Thread] DEBUG Engine               - secondsIn24h: 60
+07:02:26.760 [JavaFX Application Thread] DEBUG Engine               - runtimeInfo: RuntimeInfo(platform=WINDOWS, version=11.4, build=06.08.2019 18.29)
+07:02:26.760 [JavaFX Application Thread] DEBUG Engine               - soundMenuPress: menu/press.wav
+07:02:26.760 [JavaFX Application Thread] DEBUG Engine               - urlGithub: https://github.com/AlmasB/FXGL
+07:02:26.760 [JavaFX Application Thread] DEBUG Engine               - isLinux: false
+07:02:26.760 [JavaFX Application Thread] DEBUG Engine               - profileDir: profiles/
+07:02:26.760 [JavaFX Application Thread] DEBUG Engine               - globalSoundVolumeProperty: DoubleProperty [value: 0.5]
+07:02:26.760 [JavaFX Application Thread] DEBUG Engine               - isDeveloperMenuEnabled: false
+07:02:26.760 [JavaFX Application Thread] DEBUG Engine               - isBrowser: false
+07:02:26.760 [JavaFX Application Thread] DEBUG Engine               - urlLeaderboard: http://fxgl-top.herokuapp.com/
+07:02:26.760 [JavaFX Application Thread] DEBUG Engine               - globalSoundVolume: 0.5
+07:02:26.760 [JavaFX Application Thread] DEBUG Engine               - saveDir: saves/
+07:02:26.762 [JavaFX Application Thread] DEBUG Engine               - engineServices: [class com.almasb.fxgl.audio.AudioPlayer, class com.almasb.fxgl.notification.impl.NotificationServiceProvider, class com.almasb.fxgl.achievement.AchievementManager]
+07:02:26.762 [JavaFX Application Thread] DEBUG Engine               - globalMusicVolume: 0.5
+07:02:26.762 [JavaFX Application Thread] DEBUG Engine               - width: 750
+07:02:26.762 [JavaFX Application Thread] DEBUG Engine               - saveFileExt: .sav
+07:02:26.762 [JavaFX Application Thread] DEBUG Engine               - isAndroid: false
+07:02:26.762 [JavaFX Application Thread] DEBUG Engine               - fontUI: VarelaRound-Regular.ttf
+07:02:26.763 [JavaFX Application Thread] DEBUG Engine               - enabledMenuItems: []
+07:02:26.763 [JavaFX Application Thread] DEBUG Engine               - isIOS: false
+07:02:26.788 [JavaFX Application Thread] INFO  Engine               - FXGL initialization took: 1,116 sec
+07:02:26.788 [JavaFX Application Thread] DEBUG LoopRunner           - Starting loop
+07:02:26.799 [JavaFX Application Thread] DEBUG StartupScene         - STARTUP
+07:02:26.799 [JavaFX Application Thread] DEBUG Engine               - Starting new game
+07:02:26.800 [JavaFX Application Thread] DEBUG MainWindow           - Applying CSS: fxgl_dark.css
+07:02:26.800 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/ui/css/fxgl_dark.css
+07:02:26.800 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/ui/cursors/fxgl_default.png
+07:02:26.802 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+07:02:26.822 [JavaFX Application Thread] DEBUG MainWindow           - StartupScene -> LoadingScene
+07:02:26.830 [JavaFX Application Thread] DEBUG Engine               - Removing overlay from StartupScene and adding to LoadingScene
+07:02:26.830 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+07:02:26.830 [FXGL Background Thread 1 ] DEBUG GameWorld            - Clearing game world
+07:02:26.832 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Clearing physics world
+07:02:26.832 [FXGL Background Thread 1 ] DEBUG GameScene            - Clearing game scene
+07:02:26.832 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+07:02:26.833 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from file system: /assets/textures/fondoNivel1.jpeg
+07:02:26.878 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from file system: /assets/textures/player1.png
+07:02:26.898 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from file system: /assets/textures/arma2.png
+07:02:26.915 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+07:02:26.916 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+07:02:26.919 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+07:02:26.919 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0,088 sec
+07:02:27.015 [JavaFX Application Thread] DEBUG MainWindow           - Applying CSS: fxgl_dark.css
+07:02:27.015 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/ui/css/fxgl_dark.css
+07:02:27.016 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/ui/cursors/fxgl_default.png
+07:02:27.017 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+07:02:27.032 [JavaFX Application Thread] DEBUG MainWindow           - LoadingScene -> GameScene
+07:02:27.032 [JavaFX Application Thread] DEBUG Engine               - Removing overlay from LoadingScene and adding to GameScene
+07:02:27.909 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/textures/enemy1.png
+07:02:28.611 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/textures/bullet.png
+07:02:28.672 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:28.935 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:29.087 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:29.263 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:29.405 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:29.455 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/textures/explosion.png
+07:02:29.887 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:30.056 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:30.158 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:30.208 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:30.309 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:30.367 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:30.535 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:30.583 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:30.823 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:30.884 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:30.916 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:31.311 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:31.394 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:31.607 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:32.031 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:32.339 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:32.391 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:32.751 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:33.063 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:33.191 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:33.800 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:34.047 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:34.231 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:34.338 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:34.351 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:34.480 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:34.535 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:35.128 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:35.886 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:36.103 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:36.887 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:37.081 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:37.255 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:37.271 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:37.274 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/textures/arma1.png
+07:02:37.431 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:37.623 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:38.007 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/textures/enemy2.png
+07:02:38.013 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:38.742 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:38.744 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:39.478 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:39.479 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:39.846 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:39.984 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:40.167 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:40.216 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:40.311 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:40.312 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:41.063 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:41.191 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:41.192 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:41.271 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:41.447 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:41.728 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:41.849 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:41.959 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:42.023 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:42.103 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:42.152 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:42.272 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:42.305 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:42.442 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:42.466 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:42.550 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:42.640 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:42.952 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:43.008 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:43.063 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:43.217 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:43.344 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:43.408 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:43.447 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:43.688 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:43.865 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:44.015 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:44.424 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:44.623 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:44.816 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:44.975 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:45.016 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:45.136 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:45.496 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:45.601 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:45.903 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:45.975 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:46.119 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:46.327 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:46.527 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:46.712 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:47.079 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:47.248 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:47.759 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:48.025 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:48.406 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:48.416 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:50.792 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:50.935 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/bullet.png
+07:02:51.697 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png
+07:02:51.699 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from file system: /assets/textures/vida.png
+07:02:51.720 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.731 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.735 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.751 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.762 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.767 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.783 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.796 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.799 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.815 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.829 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.841 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.847 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.859 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.864 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.879 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.891 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.895 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.909 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.923 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.927 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.943 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.955 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.959 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.976 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.986 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:51.991 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.006 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.016 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.022 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.037 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.038 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.054 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.066 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.071 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.087 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.098 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.104 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.118 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.131 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.135 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.151 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.163 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.167 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.183 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.195 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.199 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.213 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.217 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.232 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.248 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.260 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.263 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.279 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.289 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.295 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.310 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.320 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.327 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.341 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.343 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.359 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.369 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.375 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.387 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.391 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.407 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.417 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.423 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.437 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.440 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.454 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.468 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.471 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.488 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.500 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.504 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.520 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.530 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.535 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.551 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.563 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.567 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.584 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.599 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.612 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.616 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.632 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.648 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.660 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.663 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.680 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.693 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.707 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.711 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.728 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.741 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.754 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.760 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.776 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.789 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.804 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.808 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.823 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.835 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.840 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.856 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.868 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.872 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.888 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.900 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.904 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.920 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.931 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.936 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.951 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.963 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.968 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.983 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.995 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:52.999 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:52.999 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.001 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.015 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.016 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.018 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.028 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.028 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.030 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.042 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.043 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.046 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.058 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.059 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.060 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.072 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.073 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.074 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.079 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.079 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.081 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.095 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.097 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.099 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.111 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.112 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.115 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.127 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.127 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.129 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.140 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.141 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.143 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.154 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.154 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.156 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.160 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.160 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.161 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.176 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.176 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.178 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.189 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.189 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.191 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.202 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.202 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.204 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.208 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.208 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.210 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.223 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.224 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.225 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.236 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.236 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.239 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.250 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.251 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.253 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.256 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.256 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.257 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.272 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.272 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.274 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.285 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.285 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.288 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.299 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.300 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.302 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.313 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.314 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.316 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.319 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.320 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.323 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.336 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.336 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.338 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.349 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.349 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.353 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.363 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.364 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.366 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.378 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.378 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.381 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.383 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.383 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.386 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.399 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.400 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.403 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.415 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.415 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.419 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.430 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.431 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.433 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.446 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.446 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.449 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.461 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.462 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.466 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.478 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.479 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.482 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.493 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.495 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.498 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.511 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.511 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.514 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.525 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.525 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.529 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.540 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.541 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.544 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.555 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.557 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.560 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.573 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.573 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.577 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.589 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.590 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.593 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.605 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.606 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.609 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.621 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.623 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.626 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.638 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.639 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.642 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.654 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.654 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.657 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.669 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.670 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.673 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.685 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.686 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.690 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.703 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.704 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.710 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.719 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.720 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.724 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.735 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.735 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.739 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.750 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.750 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.755 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.767 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.767 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.770 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.782 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.782 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.786 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.798 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.798 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.802 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.814 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.814 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.819 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.831 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.831 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.835 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.847 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.848 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.852 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.862 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.863 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.868 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.879 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.879 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.884 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.895 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.895 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.900 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.911 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.911 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.916 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.927 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.927 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.932 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.943 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.943 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.948 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.959 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.959 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.964 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.974 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.975 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.980 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:53.990 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:53.991 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:53.995 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:54.007 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:54.007 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:54.012 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:54.023 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:54.023 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:54.028 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:54.039 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:54.039 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:54.045 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:54.055 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:54.056 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:54.061 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:54.071 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:54.072 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:54.076 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:54.087 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:54.087 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:54.092 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:54.102 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+07:02:54.104 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+07:02:54.109 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/vida.png
+07:02:54.191 [JavaFX Application Thread] DEBUG Engine               - Exiting FXGL
+07:02:54.191 [JavaFX Application Thread] DEBUG Engine               - Shutting down background threads
+07:02:54.191 [JavaFX Application Thread] DEBUG Engine               - Saving FXGL system data
+07:02:54.194 [JavaFX Application Thread] DEBUG FSServiceImpl        - Writing to: C:\Users\daron\Downloads\workspace\Programas java\Avanzado\Game2D\system\fxgl.bundle
+07:02:54.198 [JavaFX Application Thread] DEBUG Engine               - Closing logger and exiting JavaFX
