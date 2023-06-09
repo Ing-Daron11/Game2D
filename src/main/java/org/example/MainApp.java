@@ -20,7 +20,6 @@ import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
 import static com.almasb.fxgl.dsl.FXGLForKtKt.getGameScene;
-import static com.almasb.fxgl.dsl.FXGLForKtKt.getGameWorld;
 import static com.almasb.fxgl.dsl.FXGLForKtKt.getInput;
 
 public class MainApp extends GameApplication {
@@ -34,7 +33,9 @@ public class MainApp extends GameApplication {
     public static boolean isDeployedLevel3;
     private int score = 0;
     int lifeCounter = 3;
+    int ammoCounter = 0;
     private Texture life;
+    private Texture ammo;
 
     private PlayerComponent playerComponent;
     @Override
@@ -44,7 +45,8 @@ public class MainApp extends GameApplication {
         //gameSettings.setIntroEnabled(true);
         gameSettings.setFullScreenAllowed(true);
         gameSettings.setTitle("Nuke Dungeons");
-        gameSettings.setVersion("0.3");
+        gameSettings.setVersion("0.4");
+
     }
 
     @Override
@@ -57,7 +59,6 @@ public class MainApp extends GameApplication {
         run(() ->{
            spawn("enemy", new SpawnData(random(100,400),random(100,500)));
         }, Duration.seconds(2), 10);
-
     }
     @Override
     public void onUpdate(double tpf){
@@ -81,6 +82,24 @@ public class MainApp extends GameApplication {
         life.setScaleX(0.08);
         life.setScaleY(0.08);
         getGameScene().addUINode(life);
+
+        //De la munición
+        Text AmmoText = new Text("Ammo: " + ammoCounter);
+        AmmoText.setTranslateX(590);
+        AmmoText.setTranslateY(60);
+        AmmoText.setFont(Font.font("Bodoni", 30));
+
+        getGameScene().addUINode(AmmoText);
+        ammo = FXGL.getAssetLoader().loadTexture("bullet.png");
+        ammo.setTranslateX(500);
+        ammo.setTranslateY(-50);
+        ammo.setScaleX(0.25);
+        ammo.setScaleY(0.25);
+        ammo.setRotate(-90);
+        getGameScene().addUINode(ammo);
+
+
+        //Niveles
         if(score >= 1000 && !isDeployedLevel2){
             level2();
             getGameScene().setBackgroundRepeat("fondoNivel2.jpeg");
@@ -106,7 +125,7 @@ public class MainApp extends GameApplication {
     }
 
     private void level3(){
-        spawn("life", random(20, getAppWidth()-20),random(20,getAppHeight()-20));
+        spawn("life", random(0, getAppWidth()),random(0,getAppHeight()));
         run(() ->{
             spawn("enemy2", new SpawnData(random(100,400),random(100,500)));
         }, Duration.seconds(2), 15);
@@ -174,10 +193,10 @@ public class MainApp extends GameApplication {
             protected void onCollisionBegin(Entity player, Entity weapon) {
                 WithWeapon weaponComponent = player.getComponent(WithWeapon.class);
                 weaponComponent.setWeapon(weapon);
-                int weaponName = weapon.getComponent(WeaponComponent.class).getType();
-                if (weaponName == 1) {
+                int weaponType = weapon.getComponent(WeaponComponent.class).getType();
+                if (weaponType == 1) {
                     weaponComponent.setAmmoCount(30);
-                } else if (weaponName == 2) {
+                } else if (weaponType == 2) {
                     weaponComponent.setAmmoCount(10);
                 }
             }
@@ -187,7 +206,9 @@ public class MainApp extends GameApplication {
             @Override
             protected void onCollisionBegin(Entity bullet, Entity enemy){
                 Point2D center = enemy.getCenter().subtract(40, 218); //(x, y)
+                Point2D centerUp = enemy.getCenter().subtract(40, 35); //(x, y) un poquito más arriba del centro del personaje,
                 spawn("explosion", center);
+                spawn("scoreText", new SpawnData(centerUp).put("text", "+100"));
                 bullet.removeFromWorld();
                 enemy.removeFromWorld();
                 inc("score", +100);

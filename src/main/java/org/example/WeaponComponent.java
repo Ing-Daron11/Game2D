@@ -12,7 +12,19 @@ public class WeaponComponent extends Component {
         this.ammunition = ammunition;
     }
 
+    public void decreaseAmmoCount() {
+        ammunition--;
+    }
+
     public int getType(){
         return this.gunType;
     }
+    public int getAmmunition() {
+        return ammunition;
+    }
+    public void setAmmunition(int ammunition) {
+        this.ammunition = ammunition;
+    }
+
+
 }

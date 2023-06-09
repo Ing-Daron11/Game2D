@@ -1,5 +1,6 @@
 package org.example;
 
+import com.almasb.fxgl.animation.Interpolators;
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.dsl.components.ExpireCleanComponent;
 import com.almasb.fxgl.dsl.components.OffscreenCleanComponent;
@@ -62,7 +63,6 @@ public class GameEntityFactory implements EntityFactory {
                 .type(EntityType.LIFE)
                 .viewWithBBox("vida.png")
                 .with(new CollidableComponent(true))
-                .with(new WeaponComponent(1, 15))
                 .scale(0.1, 0.1)
                 .build();
     }
@@ -139,5 +139,32 @@ public class GameEntityFactory implements EntityFactory {
                 .build();
     }
 
+    @Spawns("scoreText")
+    public Entity newScoreText(SpawnData data) {
+        String text = data.get("text");
+        var e =  FXGL.entityBuilder()
+                .from(data)
+                .view(getUIFactory().newText(text, 20))
+                .with(new ExpireCleanComponent(Duration.seconds(0.66)))
+                .build();
+
+            animationBuilder()
+                    .duration(Duration.seconds(0.1))
+                    .interpolator(Interpolators.EXPONENTIAL.EASE_OUT())
+                    .translate(e)
+                    .from(new Point2D(data.getX(), data.getY()))
+                    .to(new Point2D(data.getX(), data.getY()+35))
+                    .build();
+        return e;
+    }
+
+    @Spawns("gameOver")
+    public Entity newGameOver(SpawnData data) {
+        return FXGL.entityBuilder()
+                .from(data)
+                .view("mapa1.png")
+                .scale(100,100)
+                .build();
+    }
 
 }
