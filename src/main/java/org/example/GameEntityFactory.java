@@ -6,12 +6,8 @@ import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.EntityFactory;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.entity.Spawns;
-import com.almasb.fxgl.physics.BoundingShape;
-import com.almasb.fxgl.physics.HitBox;
+import com.almasb.fxgl.entity.components.CollidableComponent;
 import javafx.geometry.Rectangle2D;
-
-import static com.almasb.fxgl.dsl.FXGLForKtKt.getAppHeight;
-import static com.almasb.fxgl.dsl.FXGLForKtKt.getAppWidth;
 
 public class GameEntityFactory implements EntityFactory {
 
@@ -19,8 +15,11 @@ public class GameEntityFactory implements EntityFactory {
     public Entity newPlayer(SpawnData data) {
         return FXGL.entityBuilder()
                 .from(data)
-                .view("player1.png")
-                .bbox(new HitBox(BoundingShape.box(32, 32)))
+                .type(EntityType.PLAYER)
+                .viewWithBBox("player1.png")
+                .with(new CollidableComponent(true))
+                .with(new PlayerComponent())
+                .with(new WithWeapon())
                 .scale(0.2,0.2)
                 .build();
     }
@@ -29,8 +28,10 @@ public class GameEntityFactory implements EntityFactory {
     public Entity newWeapon(SpawnData data) {
         return FXGL.entityBuilder()
                 .from(data)
-                .view("arma1.png")
-                .bbox(new HitBox(BoundingShape.box(32, 32)))
+                .type(EntityType.WEAPON)
+                .viewWithBBox("arma2.png")
+                .with(new CollidableComponent(true))
+                .with(new WeaponComponent(1, 15))
                 .scale(0.1,0.1)
                 .build();
     }
