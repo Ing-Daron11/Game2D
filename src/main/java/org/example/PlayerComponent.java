@@ -1,10 +1,12 @@
 package org.example;
 
 import com.almasb.fxgl.entity.Entity;
+import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.entity.component.Component;
 import javafx.geometry.Point2D;
-import static com.almasb.fxgl.dsl.FXGLForKtKt.getGameWorld;
-import static com.almasb.fxgl.dsl.FXGLForKtKt.getInput;
+import javafx.util.Duration;
+
+import static com.almasb.fxgl.dsl.FXGLForKtKt.*;
 
 public class PlayerComponent extends Component {
     double speed = 5;
@@ -28,8 +30,7 @@ public class PlayerComponent extends Component {
         Entity weapon = getEntity().getComponent(WithWeapon.class).getWeapon();
         if (weapon != null) {
             weapon.setPosition(getEntity().getPosition().subtract(150,60));
-            Point2D direction = getInput().getMousePositionWorld()
-                    .subtract(entity.getPosition());
+            Point2D direction = getInput().getMousePositionWorld().subtract(entity.getPosition());
             weapon.rotateToVector(direction);
             if(direction.getX()<0){
                 weapon.rotateBy(180);
@@ -43,4 +44,17 @@ public class PlayerComponent extends Component {
         }
 
     }
+    public void reload() {
+        getGameTimer().runOnceAfter(() -> {
+            WithWeapon withWeapon= getEntity().getComponent(WithWeapon.class);
+            if(withWeapon.getWeapon().getComponent(WeaponComponent.class).getType()== 1){
+                withWeapon.setAmmoCount(10);
+            }
+            else{
+                withWeapon.setAmmoCount(30);
+            }
+            MainApp.isRealoding = false;
+        }, Duration.millis(1500));
+    }
+
 }

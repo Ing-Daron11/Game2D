@@ -6,24 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="36841497-ef7c-464c-bc0f-8d5533094a89" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-07-jun.-2023-15.12.31.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-07-jun.-2023-15.13.22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-07-jun.-2023-15.14.11.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-07-jun.-2023-15.14.28.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-07-jun.-2023-15.22.45.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-07-jun.-2023-15.23.22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-07-jun.-2023-15.26.29.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-07-jun.-2023-15.27.24.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-07-jun.-2023-15.27.51.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-07-jun.-2023-15.32.56.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-08-jun.-2023-18.28.09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-08-jun.-2023-18.36.45.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-08-jun.-2023-18.54.55.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-08-jun.-2023-18.59.21.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-08-jun.-2023-19.07.57.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-08-jun.-2023-19.09.05.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-08-jun.-2023-19.09.42.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-08-jun.-2023-19.10.56.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-08-jun.-2023-19.12.50.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-08-jun.-2023-19.14.09.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameEntityFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameEntityFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PlayerComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PlayerComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/WithWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/WithWeapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/GameEntityFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/GameEntityFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/MainApp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/MainApp$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Player.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/PlayerComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/PlayerComponent.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,5 +90,10 @@
       <updated>1686155455038</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Game2D$MainApp.ic" NAME="MainApp Coverage Results" MODIFIED="1686286799467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -4,21 +4,26 @@ import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
+import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.geometry.Point2D;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
+import javafx.scene.transform.Scale;
 import javafx.util.Duration;
 import javafx.scene.input.KeyCode;
 
 
-import static com.almasb.fxgl.dsl.FXGL.getPhysicsWorld;
-import static com.almasb.fxgl.dsl.FXGLForKtKt.*;
+import static com.almasb.fxgl.dsl.FXGL.*;
 
 public class MainApp extends GameApplication {
 
     private Entity player;
     private Entity weapon;
+    public static boolean isRealoding;
 
     private PlayerComponent playerComponent;
     @Override
@@ -27,25 +32,19 @@ public class MainApp extends GameApplication {
         gameSettings.setHeight(750);
         //gameSettings.setIntroEnabled(true);
         gameSettings.setFullScreenAllowed(true);
-        gameSettings.setTitle("Dungeons");
-        gameSettings.setVersion("0.2");
+        gameSettings.setTitle("Nuke Dungeons");
+        gameSettings.setVersion("0.3");
     }
 
-    private void spawnEnemy() {
-        spawn("enemy",250,500);
-    }
     @Override
     protected void initGame() {
         FXGL.getGameWorld().addEntityFactory(new GameEntityFactory());
         player = spawn("player", 150, 150);
         weapon = spawn("weapon", 250, 250);
         playerComponent = new PlayerComponent();
-        //Todo esto reemplaza al método run, sirve para generar 4 enemigos con un intervalo de 2 segundos
-        Timeline timeline = new Timeline(
-                new KeyFrame(Duration.seconds(2), event -> spawnEnemy())
-        );
-        timeline.setCycleCount(4);
-        timeline.play();
+        run(() ->{
+           spawn("enemy", new SpawnData(random(100,400),random(100,500)));
+        }, Duration.seconds(2), 10);
     }
 
     @Override
@@ -74,6 +73,27 @@ public class MainApp extends GameApplication {
                 playerComponent.moveLeft(player);
             }
         },KeyCode.A);
+
+        getInput().addAction(new UserAction("Shoot") {
+            @Override
+            protected void onActionBegin() {
+                WithWeapon withWeapon = player.getComponent(WithWeapon.class);
+                if (withWeapon.getWeapon() != null) {
+                    if (withWeapon.getAmmoCount() == 0 && !isRealoding) {
+                        player.getComponent(PlayerComponent.class).reload();
+                    }
+                    if (withWeapon.getAmmoCount() > 0 && !isRealoding) {
+                        withWeapon.decreaseAmmoCount();
+                        spawn("bullet");
+                    } else {
+                        if (!isRealoding) {
+                            player.getComponent(PlayerComponent.class).reload();
+                            isRealoding = true;
+                        }
+                    }
+                }
+            }
+        }, MouseButton.PRIMARY);
     }
 
     @Override
@@ -83,18 +103,19 @@ public class MainApp extends GameApplication {
             protected void onCollisionBegin(Entity player, Entity weapon) {
                 WithWeapon weaponComponent = player.getComponent(WithWeapon.class);
                 weaponComponent.setWeapon(weapon);
-                int weaponType = weapon.getComponent(WeaponComponent.class).getType();
-                if (weaponType == 1) {
-                    weaponComponent.setAmmoCount(10);
-                } else if (weaponType == 2) {
-                    weaponComponent.setAmmoCount(30);
-                }
+            }
+        });
 
+        getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.BULLET, EntityType.ENEMY) {
+            @Override
+            protected void onCollisionBegin(Entity bullet, Entity enemy){
+                Point2D center = enemy.getCenter().subtract(40, 218); //(x, y)
+                spawn("explosion", center);
+                bullet.removeFromWorld();
+                enemy.removeFromWorld();
             }
         });
     }
-
-
 
     public static void main(String[] args) {
         launch(args);

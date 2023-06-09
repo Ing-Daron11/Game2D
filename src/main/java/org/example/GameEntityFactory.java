@@ -1,13 +1,20 @@
 package org.example;
 
 import com.almasb.fxgl.dsl.FXGL;
+import com.almasb.fxgl.dsl.components.ExpireCleanComponent;
+import com.almasb.fxgl.dsl.components.OffscreenCleanComponent;
+import com.almasb.fxgl.dsl.components.ProjectileComponent;
 import com.almasb.fxgl.dsl.components.RandomMoveComponent;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.EntityFactory;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.entity.Spawns;
 import com.almasb.fxgl.entity.components.CollidableComponent;
+import javafx.geometry.Point2D;
 import javafx.geometry.Rectangle2D;
+import javafx.util.Duration;
+
+import static com.almasb.fxgl.dsl.FXGLForKtKt.*;
 
 public class GameEntityFactory implements EntityFactory {
 
@@ -40,9 +47,37 @@ public class GameEntityFactory implements EntityFactory {
     public Entity newEnemy(SpawnData data) {
         return FXGL.entityBuilder()
                 .from(data)
-                .view("enemy1.png")
-                .with(new RandomMoveComponent(new Rectangle2D(200,200, 400, 400),25 ))
+                .type(EntityType.ENEMY)
+                .viewWithBBox("enemy1.png")
+                .with(new RandomMoveComponent(new Rectangle2D(0,0, getAppWidth(), getAppHeight()),25 ))
+                .with(new CollidableComponent(true))
                 .scale(0.15,0.15)
+                .build();
+    }
+
+    @Spawns("bullet")
+    public Entity newBullet(SpawnData data){
+        Entity player =getGameWorld().getSingleton(EntityType.PLAYER);
+        Entity weapon = player.getComponent(WithWeapon.class).getWeapon();
+        Point2D direction = getInput().getMousePositionWorld().subtract(player.getPosition());
+        return FXGL.entityBuilder()
+                .from(data)
+                .type(EntityType.BULLET)
+                .viewWithBBox("bullet.png")
+                .with(new CollidableComponent(true))
+                .with(new ProjectileComponent(direction, 200))
+                .with(new OffscreenCleanComponent())
+                .scale(0.1, 0.1)
+                .at(weapon.getPosition().subtract(-10, -50))
+                .build();
+    }
+
+    @Spawns("explosion")
+    public Entity newExplosion(SpawnData data) {
+        return FXGL.entityBuilder()
+                .from(data)
+                .view(texture("explosion.png").toAnimatedTexture(7, Duration.seconds(0.66)).play())
+                .with(new ExpireCleanComponent(Duration.seconds(0.66)))
                 .build();
     }
 
