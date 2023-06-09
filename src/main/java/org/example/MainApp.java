@@ -7,6 +7,7 @@ import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
+import com.almasb.fxgl.texture.Texture;
 import javafx.geometry.Point2D;
 import javafx.scene.input.MouseButton;
 import javafx.util.Duration;
@@ -18,6 +19,7 @@ import javafx.scene.text.Text;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
+import static com.almasb.fxgl.dsl.FXGLForKtKt.getGameScene;
 import static com.almasb.fxgl.dsl.FXGLForKtKt.getGameWorld;
 import static com.almasb.fxgl.dsl.FXGLForKtKt.getInput;
 
@@ -31,6 +33,8 @@ public class MainApp extends GameApplication {
     public static boolean isDeployedLevel2;
     public static boolean isDeployedLevel3;
     private int score = 0;
+    int lifeCounter = 3;
+    private Texture life;
 
     private PlayerComponent playerComponent;
     @Override
@@ -57,16 +61,34 @@ public class MainApp extends GameApplication {
     }
     @Override
     public void onUpdate(double tpf){
+        //Del nivel
+        getGameScene().clearUINodes();
         Text text = new Text("Nivel: " + currentLevel);
         text.setTranslateX(50);
         text.setTranslateY(30);
         text.setFont(Font.font("Bodoni", 30));
         getGameScene().addUINode(text);
+
+        //De la vida
+        Text lifeText = new Text("life: " + lifeCounter);
+        lifeText.setTranslateX(610);
+        lifeText.setTranslateY(30);
+        lifeText.setFont(Font.font("Bodoni", 30));
+        getGameScene().addUINode(lifeText);
+        life = FXGL.getAssetLoader().loadTexture("vida.png");
+        life.setTranslateX(468);
+        life.setTranslateY(-239);
+        life.setScaleX(0.08);
+        life.setScaleY(0.08);
+        getGameScene().addUINode(life);
         if(score >= 1000 && !isDeployedLevel2){
             level2();
+            getGameScene().setBackgroundRepeat("fondoNivel2.jpeg");
         }
         if(score >= 2500 && !isDeployedLevel3){
             level3();
+            getGameScene().setBackgroundRepeat("fondoNivel3.jpeg");
+            player.getComponent(PlayerComponent.class).setSpeed(30);
         }
     }
 
@@ -172,11 +194,22 @@ public class MainApp extends GameApplication {
                 score += 100;
             }
         });
+
+        getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.ENEMY, EntityType.PLAYER) {
+            @Override
+            protected void onCollisionBegin(Entity bullet, Entity enemy){
+                Point2D pos = player.getCenter().subtract(20,100); //(x, y)
+                spawn("restLife", pos);
+                inc("life", -1);
+                lifeCounter --;
+            }
+        });
     }
 
     @Override
     protected void initGameVars(Map<String, Object> vars){
         vars.put("score", 0);
+        vars.put("life", 3);
     }
 
     @Override

@@ -57,4 +57,8 @@ public class PlayerComponent extends Component {
         }, Duration.millis(1500));
     }
 
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+
 }

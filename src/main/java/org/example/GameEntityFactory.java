@@ -91,6 +91,18 @@ public class GameEntityFactory implements EntityFactory {
                 .build();
     }
 
+    @Spawns("enemy3")
+    public Entity newEnemy3(SpawnData data) {
+        return FXGL.entityBuilder()
+                .from(data)
+                .type(EntityType.ENEMY)
+                .viewWithBBox("enemy2.png")
+                .with(new RandomMoveComponent(new Rectangle2D(0,0, getAppWidth(), getAppHeight()),75 ))
+                .with(new CollidableComponent(true))
+                .scale(0.15,0.15)
+                .build();
+    }
+
     @Spawns("bullet")
     public Entity newBullet(SpawnData data){
         Entity player =getGameWorld().getSingleton(EntityType.PLAYER);
@@ -114,6 +126,16 @@ public class GameEntityFactory implements EntityFactory {
                 .from(data)
                 .view(texture("explosion.png").toAnimatedTexture(7, Duration.seconds(0.66)).play())
                 .with(new ExpireCleanComponent(Duration.seconds(0.66)))
+                .build();
+    }
+
+    @Spawns("restLife")
+    public Entity newRestLife(SpawnData data) {
+        return FXGL.entityBuilder()
+                .from(data)
+                .view(texture("lifeSecuence.png").toAnimatedTexture(3, Duration.seconds(0.80)).play())
+                .with(new ExpireCleanComponent(Duration.seconds(0.90)))
+                .scale(0.3,0.3)
                 .build();
     }
 
